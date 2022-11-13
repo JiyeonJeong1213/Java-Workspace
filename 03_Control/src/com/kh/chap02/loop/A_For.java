@@ -322,38 +322,38 @@ public class A_For {
 		
 		
 		//1***
-		for(int i = 1; i < 5; i++) {
+		/*for(int i = 1; i < 5; i++) {
 			if(i == 1) {
 				System.out.print(i);
 			}else {
 				System.out.print("*");
 			}
-		}
+		}*/
 
 		//*2**
-		for(int i = 1; i < 5; i++) {
+		/*for(int i = 1; i < 5; i++) {
 			if(i == 2) {
 				System.out.println(i);
 			}else {
 				System.out.print("*");
 			}
-		}
+		}*/
 		//**3*
-		for(int i = 1; i < 5; i++) {
+		/*for(int i = 1; i < 5; i++) {
 			if(i == 3) {
 				System.out.println(i);
 			}else {
 				System.out.print("*");
 			}
-		}
+		}*/
 		//***4
-		for(int i = 1; i < 5; i++) {
+		/*for(int i = 1; i < 5; i++) {
 			if(i == 4) {
 				System.out.println(i);
 			}else {
 				System.out.print("*");
 			}
-		}
+		}*/
 		
 		//정답
 		
