@@ -66,10 +66,6 @@ public class A_Break {
 				System.out.println("잘못입력했습니다. 다시 입력해주세요.");
 			}
 		}
-		
-		
-		
-		
 	}
 	
 	
