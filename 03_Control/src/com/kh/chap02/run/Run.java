@@ -74,7 +74,7 @@ public class Run {
 		
 		//lp.practice18();
 		
-		//lp.practice19();
+		lp.practice19();
 		
 		B_While bw = new B_While();
 		
@@ -90,7 +90,7 @@ public class Run {
 		
 		//bw.method6();
 		
-		bw.method7();
+		//bw.method7();
 		
 		
 	}

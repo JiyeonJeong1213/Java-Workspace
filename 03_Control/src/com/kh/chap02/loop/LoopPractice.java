@@ -234,26 +234,26 @@ public class LoopPractice {
 		
 		Scanner sc = new Scanner(System.in);
 		
-		System.out.print("숫자 : ");
+		System.out.print("2 이상의 정수 : ");
 		int num = sc.nextInt();
-		int total = 0;
-		
+		int count = 0;
+		int check = 0;
 		
 		if(num>=2) {
 			for(int i=2; i <= num; i++) {
-				boolean isPrime = true;
 				// i값이 소수인지 아닌지 검사
 				for(int j=2; j<i; j++) {
 					if(i % j == 0) {
-						isPrime = false;
+						check++; // 소수가 아니면 check를 1로만들고 for문을 빠져나감
+						break;
 					}
 				}
-				if(isPrime=true) {
-					System.out.print(i+" ");
-					total++;
+				if(check == 0) {
+					count++; 
 				}
+				check=0;
 			}
-			System.out.println("2부터 "+num+"까지 소수의 개수는 "+total+"개입니다.");
+			System.out.println("2부터 "+num+"까지 소수의 개수는 "+count+"개입니다.");
 		}else {
 			System.out.println("잘못 입력하셨습니다.");
 			return;
@@ -265,21 +265,24 @@ public class LoopPractice {
 		
 		Scanner sc = new Scanner(System.in);
 		System.out.print("자연수 하나를 입력하세요 : ");
-		int num = sc.nextInt();
-		int count = 0;
-		
-		/*for(int i=1; i*3<=num; i++) {
-			int i2 = i*2;
-			int i3 = i*3;
-			System.out.print(i2+" "+i3);
-			if(i2%3==0 || i3%2==0) {
-				count++;
+		while(true) {
+			int num = sc.nextInt();
+			if(num<0) {
+				System.out.println("잘못 입력했습니다.");
+				continue;
 			}
+			int count = 0;
+			for(int i = 1;i<=num;i++) {
+				if(i%2==0||i%3==0) {
+					System.out.print(i+" ");
+				}
+				if(i%2==0 && i%3==0) {
+					count++;
+				}
+			}
+			System.out.println("\ncount : "+count);
+			break;
 		}
-		System.out.println();
-		System.out.println(count);
-		*/
-		
 	}
 	
 	public void practice16() {
@@ -361,26 +364,32 @@ public class LoopPractice {
 		System.out.print("정수입력 : ");
 		int num = sc.nextInt();
 		
-		for(int i=0; i<=num/2+1; i++) {
+		for(int i=0; i<num; i++) {
 			for(int j=num-1; j>i; j--) {
 				System.out.print(" ");
 			}
-			System.out.print("*");
-			System.out.println();
-			if(i==0) {
-				break;
-			}else {
-				for(int j=0; j<i-1; j++) {
+			for(int j=0; j<=2*i;j++) {
+				if(j==0 || j==2*i) {
+					System.out.print("*");
+				}else {
 					System.out.print(" ");
 				}
-				System.out.print("*");
-				
 			}
-			
+			System.out.println();
 		}
-		
-		
-		
+		for(int i=1; i<num;i++) {
+			for(int j=0; j<i; j++) {
+				System.out.print(" ");
+			}
+			for(int j=0; j<2*(num-i)-1;j++) {
+				if(j==0 || j==2*(num-i)-2) {
+					System.out.print("*");
+				}else {
+					System.out.println(" ");
+				}
+			}
+			System.out.println();
+		}
 	}
 	
 	
