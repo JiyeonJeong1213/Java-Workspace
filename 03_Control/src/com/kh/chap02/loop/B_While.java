@@ -114,7 +114,7 @@ public class B_While {
 		 * 일반적으로 거의 사용 안 됨 
 		 */
 	
-		// 조건식이 맞지 않은 경우에 do-while문 테스트
+		// 조건식이 맞지 않은 경우의 do-while문 테스트
 		
 		int num = 900;
 		
