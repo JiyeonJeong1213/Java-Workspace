@@ -109,11 +109,12 @@ public class LoopPractice {
 		int num = sc.nextInt();
 		
 		System.out.print("공차 : ");
-		int i = sc.nextInt();
+		int gong = sc.nextInt();
 		
-		/*for(;num <= (num+=i)*10 ;num += i) {
+		for(int i=1; i<=10; i++) {
 			System.out.print(num+" ");
-		}*/
+			num += gong;
+		}
 		
 	}
 	
@@ -124,8 +125,8 @@ public class LoopPractice {
 		System.out.print("정수 입력 : ");
 		int num = sc.nextInt();	
 		
-		for(int j=0; j<num; j++) {
-			for(int i=0; i<=j;i++) {
+		for(int i=0; i<num; i++) {
+			for(int j=0; j<=i;j++) {
 				System.out.print("*");
 			}
 			System.out.println();
@@ -141,7 +142,7 @@ public class LoopPractice {
 		int num = sc.nextInt();
 		
 		for(int i=0; i<num; i++) {
-			for(int j=0; j<num-i; j++) {
+			for(int j=num; j>i; j--) {
 				System.out.print("*");
 			}
 			System.out.println();
@@ -157,7 +158,7 @@ public class LoopPractice {
 		int num = sc.nextInt();
 		
 		for(int i=0; i<num; i++) {
-			for(int j=0; j<num-(i+1); j++) {
+			for(int j=num-1; j>i; j--) {
 				System.out.print(" ");
 			}
 			for(int j=0; j<=i; j++) {
@@ -176,10 +177,10 @@ public class LoopPractice {
 		int num = sc.nextInt();
 		
 		for(int i=0; i<num; i++) {
-			for(int j=0; j<=i; j++) {
+			for(int j=0; j<i; j++) {
 				System.out.print(" ");
 			}
-			for(int j=0; j<num-i; j++) {
+			for(int j=num; j>i; j--) {
 				System.out.print("*");
 			}
 			System.out.println();
@@ -195,7 +196,7 @@ public class LoopPractice {
 		int num = sc.nextInt();
 		
 		for(int i=0; i<num; i++) {
-			for(int j=0; j<num-(i+1); j++) {
+			for(int j=num-1; j>i; j--) {
 				System.out.print(" ");
 			}
 			for(int j=0; j<i*2+1; j++) {
@@ -237,20 +238,26 @@ public class LoopPractice {
 		int num = sc.nextInt();
 		int total = 0;
 		
-		/*if(num>=2) {
+		
+		if(num>=2) {
 			for(int i=2; i <= num; i++) {
-				if(num != i && num % i == 0) {
-					break;
+				boolean isPrime = true;
+				// i값이 소수인지 아닌지 검사
+				for(int j=2; j<i; j++) {
+					if(i % j == 0) {
+						isPrime = false;
 					}
-				if(num ==i && num % i == 0) {
-					System.out.print(num+" ");
+				}
+				if(isPrime=true) {
+					System.out.print(i+" ");
 					total++;
 				}
 			}
 			System.out.println("2부터 "+num+"까지 소수의 개수는 "+total+"개입니다.");
 		}else {
 			System.out.println("잘못 입력하셨습니다.");
-		}*/
+			return;
+		}
 		
 	}
 	
@@ -302,20 +309,20 @@ public class LoopPractice {
 		int num = sc.nextInt();
 		
 		for(int i=0; i<num; i++) {
-			if(i==0 || i==num) {
+			if(i==0 || i==num-1) {
 				for(int j=0; j<num; j++) {
 					System.out.print("*");
 				}
 				System.out.println();
 			}else {
 				for(int j=0; j<num; j++) {
-					if(j==0 || j==num) {
+					if(j==0 || j==num-1) {
 						System.out.print("*");
 					}else {
 						System.out.print(" ");
 					}
-					System.out.println();
 				}
+				System.out.println();
 			}
 		}
 		
@@ -328,7 +335,7 @@ public class LoopPractice {
 		int num = sc.nextInt();
 		
 		for(int i=0;i<=num/2+1;i++) {
-			for(int j=0; j<num-i-1; j++) {
+			for(int j=num-1; j>i; j--) {
 				System.out.print(" ");
 			}
 			for(int j=0; j<i*2+1;j++) {
@@ -354,7 +361,23 @@ public class LoopPractice {
 		System.out.print("정수입력 : ");
 		int num = sc.nextInt();
 		
-		
+		for(int i=0; i<=num/2+1; i++) {
+			for(int j=num-1; j>i; j--) {
+				System.out.print(" ");
+			}
+			System.out.print("*");
+			System.out.println();
+			if(i==0) {
+				break;
+			}else {
+				for(int j=0; j<i-1; j++) {
+					System.out.print(" ");
+				}
+				System.out.print("*");
+				
+			}
+			
+		}
 		
 		
 		
