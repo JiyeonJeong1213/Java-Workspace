@@ -385,7 +385,7 @@ public class LoopPractice {
 				if(j==0 || j==2*(num-i)-2) {
 					System.out.print("*");
 				}else {
-					System.out.println(" ");
+					System.out.print(" ");
 				}
 			}
 			System.out.println();
