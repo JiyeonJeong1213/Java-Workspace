@@ -18,8 +18,8 @@ public class ArrayPractice {
 		
 		int[] array = new int[10];
 		
-		for(int i = array.length-1; i >= 0; i--) {
-			array[i] = i+1;
+		for(int i = 0; i < array.length; i++) {
+			array[i] = 10-i;
 			System.out.print(array[i]+" ");
 		}
 	}
@@ -49,18 +49,23 @@ public class ArrayPractice {
 		System.out.print("문자열 : ");
 		String str = sc.nextLine();
 		
+		System.out.print("문자 : ");
+		char ch = sc.nextLine().charAt(0);
+		
 		char[] array = new char[str.length()];
+		
 		int count = 0;
-		System.out.print("application에 i가 존재하는 위치(인덱스) : ");
+		String index = "";
+		
 		for(int i = 0; i < array.length; i++) {
 			array[i] = str.charAt(i);
-			if(array[i]=='i') {
-				System.out.print(i+" ");
+			if(array[i]==ch) {
+				index += i+" ";
 				count++;
 			}
 		}
-		System.out.println();
-		System.out.println("i 개수 : "+count);
+		System.out.printf("%s에 %c가 존재하는 위치(인덱스) : %s \n", str, ch, index);
+		System.out.println(ch+" 개수 : "+count);
 	}
 	
 	public void practice6() {
@@ -86,11 +91,16 @@ public class ArrayPractice {
 		int sum = 0;
 		
 		for(int i = 0; i < array.length; i++) {
-			Scanner literal = new Scanner(System.in);
 			System.out.printf("배열 %d번째 인덱스에 넣을 값 : ", i);
 			array[i]=sc.nextInt();
-			sum += array[i];
 		}
+		
+		for(int i = 0; i < array.length; i++) {
+			sum += array[i];
+			System.out.print(array[i]+" ");
+		}
+		
+		System.out.println();
 		System.out.println("총 합 : "+sum);
 	}
 	
@@ -103,18 +113,18 @@ public class ArrayPractice {
 		if(num < 3 || num % 2 == 0) {
 			System.out.println("다시 입력하세요.");
 			practice8();
+		}else {
+			int[] array = new int[num];
+			for(int i = 0; i <= num/2; i++) {
+				array[i] = i+1;
+			}
+			for(int i = num/2+1; i < array.length; i++) {
+				array[i]= num-i;
+			}
+			for(int i = 0; i<array.length; i++) {
+				System.out.print(array[i]+(i == array.length-1 ? "" : ", "));
+			}
 		}
-		
-		int[] array = new int[num];
-		for(int i = 0; i <= num/2; i++) {
-			array[i] = i+1;
-			System.out.print(array[i]+" ");
-		}
-		for(int i = num/2; i > 0; i--) {
-			array[i]=i;
-			System.out.print(array[i]+" ");
-		}
-		
 	}
 	
 	public void practice9() {
@@ -129,20 +139,8 @@ public class ArrayPractice {
 			if(chicken.equals(array[i])) {
 				System.out.printf("%s치킨 배달 가능 \n", chicken);
 				return;
-			}else {
-				System.out.printf("%s치킨은 없는 메뉴입니다. \n", chicken);
-				
 			}
 		}
-		
+		System.out.printf("%s치킨은 없는 메뉴입니다. \n", chicken);
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
 }
