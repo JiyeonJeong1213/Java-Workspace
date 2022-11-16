@@ -232,7 +232,7 @@ public class A_Array {
 		 */
 		
 		// 현재 연결되어있는 고리를 끊고자 할 때
-		arr = null; // null : 아무것도 존개하지 않음을 의미
+		arr = null; // null : 아무것도 존재하지 않음을 의미
 	}
 
 	public void method7() {
