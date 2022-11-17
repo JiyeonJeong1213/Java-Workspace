@@ -73,7 +73,6 @@ public class Student {
 	public String information() {
 		//xxx님의 나이는 xx살이고 키는 xxx.xxcm입니다.
 		return name+"님의 나이는 "+age+"살이고 키는 "+height+"cm입니다.";
-		
 	}
 	 
 }

@@ -1,5 +1,4 @@
 package com.kh.chap01_abstraction.model.vo;
-
 public class Student {
 /*
  * 클래스의 구조
@@ -28,5 +27,4 @@ public class Student {
 	// 생성자부
 	
 	// 메소드부
-	
 }
