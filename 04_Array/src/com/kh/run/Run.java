@@ -48,13 +48,13 @@ public class Run {
 		
 		//cd.method3();
 		
-		cd.method4();
+		//cd.method4();
 		
 		//cd.method5();
 		
 		//cd.method6();
 		
-		//cd.method7();
+		cd.method7();
 	}
 		
 	
