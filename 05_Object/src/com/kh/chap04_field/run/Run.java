@@ -12,6 +12,7 @@ public class Run {
 //		              // test메소드 종료 시 num, local 변수 소멸
 //		
 //		f1 = null; // 객체 소멸 시 global 멤버변수 소멸
+//		
 		
 		//FieldTest2 f2 = new FieldTest2();
 		
@@ -36,7 +37,7 @@ public class Run {
 		
 		// 상수필드 출력
 		System.out.println(FieldTest3.NUM);
-//		FieldTest3.NUM = 99; -> 값 변경 불가
+		//FieldTest3.NUM = 99; -> 값 변경 불가
 		
 		FieldTest3.test();
 		

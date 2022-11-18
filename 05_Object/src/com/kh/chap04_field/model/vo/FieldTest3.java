@@ -19,7 +19,7 @@ public class FieldTest3 {
 	 * public static final 자료형 변수명 = 값;
 	 * 한번 지정된 값을 고정해서 쓰기 때문에 무조건 초기화를 해줘야 함
 	 * 
-	 * 예약어의 순서는 사오간없음(final static도 가능)
+	 * 예약어의 순서는 상관없음(final static도 가능)
 	 * 
 	 * static : 공유의 개념(재사용)
 	 * final : 한번 지정된 값 변경X(상수)
