@@ -10,7 +10,7 @@ public class TriangleController {
 		s.setType(3);
 		s.setHeight(height);
 		s.setWidth(width);
-		return height*width;
+		return height*width/2;
 	}
 	public void paintColor(String color) {
 		s.setColor(color);
