@@ -11,7 +11,7 @@ public class Run {
 		Book book2 = new Book("낮잠형 인간", "문학테라피", "로맹 모네리");
 		book2.inform();
 		
-		Book book3 = new Book("밤잠형 인간", "문학산책", "정지연", 13000, 20.0);
+		Book book3 = new Book("밤잠형 인간", "문학산책", "정지연", 13000, 0.0);
 		book3.inform();
 	}
 

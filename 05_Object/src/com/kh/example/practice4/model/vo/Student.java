@@ -38,20 +38,20 @@ public class Student {
 	public int getGrade() {
 		return grade;
 	}
-	public int classroom() {
+	public int getClassroom() {
 		return classroom;
 	}
-	public String name() {
+	public String getName() {
 		return name;
 	}
-	public double height() {
+	public double getHeight() {
 		return height;
 	}
-	public char gender() {
+	public char getGender() {
 		return gender;
 	}
 	
 	public void information() {
-		System.out.println(grade+"학년 "+classroom+"반 "+name+" : "+height+"cm, "+gender);
+		System.out.println(name+"학생은 "+grade+"학년 "+classroom+"반이고, 키는 "+height+"cm이며 "+gender+"학생입니다.");
 	}
 }
