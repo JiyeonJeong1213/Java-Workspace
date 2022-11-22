@@ -52,6 +52,7 @@ public class EmployeeMenu {
 			System.out.print("보너스 율 : ");
 			double bonus = sc.nextDouble();
 			ec.add(empNum, name, gender, phone, dept, salary, bonus);
+			new EmployeeMenu();
 		}else {
 			ec.add(empNum, name, gender, phone);
 			new EmployeeMenu();

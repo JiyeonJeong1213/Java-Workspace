@@ -7,15 +7,13 @@ public class TriangleController {
 	private Shape s = new Shape();
 	
 	public double calcArea(double height, double width) {
-		s.setType(3);
-		s.setHeight(height);
-		s.setWidth(width);
+		s = new Shape(3, height, width);
 		return height*width/2;
 	}
 	public void paintColor(String color) {
 		s.setColor(color);
 	}
 	public String print() {
-		return "삼각형"+s.information();
+		return "삼각형 "+s.information();
 	}
 }

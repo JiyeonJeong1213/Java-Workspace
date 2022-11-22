@@ -7,15 +7,11 @@ public class SquareController {
 	private Shape s = new Shape();
 	
 	public double calcPerimeter(double height, double width) {
-		s.setType(4);
-		s.setHeight(height);
-		s.setWidth(width);
+		s = new Shape(4, height, width);
 		return height*2 + width*2;
 	}
 	public double calcArea(double height, double width) {
-		s.setType(4);
-		s.setHeight(height);
-		s.setWidth(width);
+		s = new Shape(4, height, width);
 		return height*width;
 	}
 	public void paintColor(String color) {
