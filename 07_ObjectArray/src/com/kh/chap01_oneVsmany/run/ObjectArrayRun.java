@@ -36,11 +36,24 @@ public class ObjectArrayRun {
 		System.out.print("검색할 책 제목 : ");
 		String searchTitle = sc.nextLine();
 		
+//		for(int i = 0; i < arr.length; i++) {
+//			if(arr[i].getTitle().equals(searchTitle)) {
+//				System.out.println(arr[i].getPrice());
+//			}
+//			
+//		}
+		
+		// 만약 일치하는 도서를 찾지 못한 경우 "검색된 도서가 없습니다" 출력
+		int count = 0;
 		for(int i = 0; i < arr.length; i++) {
-			if(arr[i].getTitle().equals(searchTitle)) {
+			if(arr[i].equals(searchTitle)) {
 				System.out.println(arr[i].getPrice());
+			}else {
+				count++;
 			}
-			
+		}
+		if(count == 3) {
+			System.out.println("검색된 도서가 없습니다.");
 		}
 	}
 
