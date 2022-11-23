@@ -26,8 +26,8 @@ public class StudentMenu {
 			String result = "통과";
 			if(std.getScore() < ssm.Cut_Line) {
 				result = "재시험 대상";
-			}System.out.printf("%s학생은 %s입니다.\n", std.getName());
-			
+			}
+			System.out.printf("%s학생은 %s입니다.\n", std.getName());
 		}
 	}
 }
