@@ -31,7 +31,7 @@ public class Run {
 		ec.insert(new NoteBook("엘지", "그램", 2000000, 4), 1);
 		ec.insert(new Tablet("애플", "아이패드", 700000, true), 2);
 		
-		for(int i = 0; i < 3; i++) {
+		for(int i = 0; i < ec.select().length; i++) {
 			System.out.println(ec.select(i));
 		}
 		
