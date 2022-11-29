@@ -3,7 +3,7 @@ package com.kh.practice.chap02_abstractNInterface.model.vo;
 public class V40 extends SmartPhone implements NotePen{
 
 	public V40(String maker) {
-		this.setMaker("LG");
+		this.setMaker(maker);
 	}
 
 	@Override
@@ -32,7 +32,14 @@ public class V40 extends SmartPhone implements NotePen{
 	}
 	@Override
 	public String printInformaion() {
-		return "V40은 "+this.getMaker()+"에서 만들어졌고 제원은 다음과 같다.\n"+makeCall()+"\n"+takeCall()+"\n"+picture()+"\n"+charge()+"\n"+touch()+"\n블루투스 펜 탑재 여부 : "+bluetoothPen();
+		String result = "V40은 "+this.getMaker()+"에서 만들어졌고 제원은 다음과 같다\n";
+		result += makeCall()+"\n";
+		result += takeCall()+"\n";
+        result += picture()+"\n";
+		result += charge()+"\n";
+		result += touch()+"\n";
+		result += "블루투스 펜 탑재 여부 : "+bluetoothPen();
+		return result;
 	}
 
 	

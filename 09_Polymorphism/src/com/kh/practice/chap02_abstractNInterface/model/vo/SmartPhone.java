@@ -15,29 +15,5 @@ public abstract class SmartPhone implements CellPhone, TouchDisplay {
 		this.maker = maker;
 	}
 	
-	public String printInformaion() {
-		return "";
-	}
-	@Override
-	public String touch() {
-		return null;
-	}
-	@Override
-	public String charge() {
-		return null;
-	}
-	@Override
-	public String makeCall() {
-		return null;
-	}
-	@Override
-	public String takeCall() {
-		return null;
-	}
-	@Override
-	public String picture() {
-		return null;
-	}
-	
-	
+	public abstract String printInformaion();
 }

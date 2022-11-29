@@ -4,5 +4,5 @@ public interface NotePen {
 
 	public static final boolean PEN_BUTTON = true;
 	
-	public boolean bluetoothPen();
+	boolean bluetoothPen();
 }

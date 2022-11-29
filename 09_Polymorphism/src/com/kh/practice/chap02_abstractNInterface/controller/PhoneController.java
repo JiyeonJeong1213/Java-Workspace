@@ -11,17 +11,14 @@ public class PhoneController {
 		p[0] = new GalaxyNote9("삼성");
 		p[1] = new V40("LG");
 		
-		
-				for(Phone ph : p) {
-					if(ph instanceof GalaxyNote9) {
-						((GalaxyNote9) ph).printInformaion();
-					}
-				}
-				
+		int count = 0;
+		for(Phone ph : p) {
+			if(ph instanceof GalaxyNote9) {
+				result[count++]=((GalaxyNote9) ph).printInformaion();
+			}else {
+				result[count++]=((V40)ph).printInformaion();
+			}
+		}
 		return result;
-		
 	}
-	
-	
-	
 }

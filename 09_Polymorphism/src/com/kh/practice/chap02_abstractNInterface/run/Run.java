@@ -7,7 +7,10 @@ public class Run {
 	public static void main(String[] args) {
 		
 		PhoneController pc = new PhoneController();
-		pc.method();
+		String[] s = pc.method();
+		for(String result : s) {
+			System.out.println(result);
+			System.out.println();
+		}
 	}
-
 }
