@@ -46,9 +46,11 @@ public class PersonMenu {
 			if(pc.personCount()[0]==3) {
 				System.out.println("잘못 입력하셨습니다. 다시 입력해주세요.");
 				studentMenu();
+			}else {
+				insertStudent(); break;
 			}
 		case 2 : printStudent(); break;
-		case 9 : System.out.println("메인으로 돌아갑니다."); return;
+		case 9 : System.out.println("메인으로 돌아갑니다."); break;
 		default : 
 			System.out.println("잘못 입력하셨습니다. 다시 입력해주세요.");
 			studentMenu();
@@ -72,10 +74,10 @@ public class PersonMenu {
 				System.out.println("잘못 입력하셨습니다. 다시 입력해주세요.");
 				employeeMenu();
 			}else {
-				insertEmployee();
+				insertEmployee(); break;
 			}
 		case 2 : printEmployee(); break;
-		case 9 : System.out.println("메인으로 돌아갑니다."); return;
+		case 9 : System.out.println("메인으로 돌아갑니다."); break;
 		default : 
 			System.out.println("잘못 입력하셨습니다. 다시 입력해주세요.");
 			employeeMenu();
@@ -83,6 +85,7 @@ public class PersonMenu {
 	}
 	public void insertStudent() {
 		System.out.print("학생 이름 : ");
+		sc.nextLine();
 		String name = sc.nextLine();
 		System.out.print("학생 나이 : ");
 		int age = sc.nextInt();
