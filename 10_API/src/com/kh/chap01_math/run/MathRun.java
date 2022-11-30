@@ -14,17 +14,17 @@ public class MathRun {
 		
 		// 메소드명(매개변수) : 반환형
 		// 올림 => Math.ceil(double) : 반환값 double형
-		double Num1 = 4.349;
-		System.out.println("올림 : "+Math.ceil(Num1));
+		double num1 = 4.349;
+		System.out.println("올림 : "+Math.ceil(num1));
 		
 		// 반올림 => Math.round(double) : 반환값 long형
-		System.out.println("반올림 : "+Math.round(Num1));
+		System.out.println("반올림 : "+Math.round(num1));
 		
 		// 버림 => Math.floor(double) : 반환값이 double형
-		System.out.println("버림 : "+Math.floor(Num1));
+		System.out.println("버림 : "+Math.floor(num1));
 		
 		// 가장 가까운 정수값을 알아낸 후 실수형 반환 : Math.rint
-		System.out.println("가장 가까운 정수값 : "+Math.rint(Num1));
+		System.out.println("가장 가까운 정수값 : "+Math.rint(num1));
 		
 		// 절대값 => Math.abs(int/double/long/float) : 반환값 매개변수값 그대로 => 오버로딩
 		int num2 = -10;

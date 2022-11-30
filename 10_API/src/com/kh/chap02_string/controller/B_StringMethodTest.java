@@ -53,7 +53,8 @@ public class B_StringMethodTest {
 		char[] arr = str1.toCharArray();
 		System.out.println(arr[0]);
 		
-		// 9. static valueOf(char[] data) : String
+		// 9. static valueOf(char[] data) : String //오버로딩
+		//    => 매개변수를 String자료형으로 바꿔준다`
 		System.out.println(String.valueOf(arr));
 		
 	}

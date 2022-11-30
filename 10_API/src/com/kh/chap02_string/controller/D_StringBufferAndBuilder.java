@@ -35,7 +35,7 @@ public class D_StringBufferAndBuilder {
 		sb.deleteCharAt(sb.length()-1);
 		System.out.println(sb);
 		
-		// 내가 원하는 위치의 인덱스부터 마지막 인덱스까지 삭제해주는 메소드
+		// 내가 원하는 위치의 인덱스부터 종료 인덱스-1까지 삭제해주는 메소드
 		// 시작인덱스 <= 인덱스범위 < 종료인덱스
 		System.out.println(sb.delete(0, sb.length()));
 		System.out.println(sb);
