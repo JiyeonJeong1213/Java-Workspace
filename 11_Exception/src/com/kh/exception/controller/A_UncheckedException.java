@@ -65,7 +65,7 @@ public class A_UncheckedException {
 		System.out.print("정수 입력(0제외) : ");
 		
 		try {
-			int num = sc.nextInt(); // InputMismatchException 발생할 수 있음
+			int num = sc.nextInt(); // InputMismatchException 발생할 수 있음 : 정수 이외의 값을 입력시 발생함
 			System.out.println("나눗셈 연산 결과 : "+(10/num)); // ArithmeticException 발생할 수 있음
 		} catch(ArithmeticException e) {
 			System.out.println("0으로 나눌 수 없습니다.");

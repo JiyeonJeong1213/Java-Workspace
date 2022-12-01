@@ -14,8 +14,6 @@ public class NumberController {
 			if(num1%num2 == 0) {
 				result = true;
 			}
-		}else {
-			throw new NumRangeException("1부터 100사이의 값이 아닙니다.");
 		}
 		return result;
 	}

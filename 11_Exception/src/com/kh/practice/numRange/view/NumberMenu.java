@@ -17,6 +17,9 @@ public class NumberMenu {
 		int num2 = sc.nextInt();
 		
 		try {
+			if(!(num1 >= 1 && num1 <= 100 && num2 >= 1 && num2 <= 100)) {
+				throw new NumRangeException("1부터 100사이의 값이 아닙니다.");
+			}
 			System.out.println(num1+"은(는) "+num2+"의 배수인가 ? "+nc.checkDouble(num1, num2));
 		}catch(NumRangeException e) {
 			e.printStackTrace();

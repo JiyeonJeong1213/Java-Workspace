@@ -11,8 +11,12 @@ public class B_CheckedException {
 	 * => 주로 외부매체와 어떤 입출력시 발생
 	 */
 	
-	public void method1() throws IOException {
-		method2();
+	public void method1()  {
+		try {
+			method2();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 	}
 	
 	public void method2() throws IOException {
