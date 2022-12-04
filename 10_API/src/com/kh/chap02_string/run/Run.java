@@ -15,10 +15,10 @@ public class Run {
 		//bsm.method();
 		
 		C_StringTokenizerTest cst = new C_StringTokenizerTest();
-		//cst.method();
+		cst.method();
 		
 		D_StringBufferAndBuilder dsb = new D_StringBufferAndBuilder();
-		dsb.method();
+		//dsb.method();
 	}
 
 }
