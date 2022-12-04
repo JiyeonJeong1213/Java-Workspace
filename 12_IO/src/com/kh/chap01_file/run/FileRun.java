@@ -14,8 +14,8 @@ public class FileRun {
 			file1.createNewFile();
 			
 			// 2. 경로 지정을 한 파일명(C:\\aaa\\test.txt)을 제시해서 생성하기 => 이때 존재하는 경로를 제시해야 함 
-			File file2 = new File("C:\\aaa\\test.txt");
-			file2.createNewFile();
+//			File file2 = new File("C:\\aaa\\test.txt");
+//			file2.createNewFile();
 			
 			// 3. 폴더를 생성하고 나서 그 안에 파일을 생성하는 방법
 			String dir = "C:\\bbb";

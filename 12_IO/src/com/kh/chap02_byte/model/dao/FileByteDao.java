@@ -96,7 +96,6 @@ public class FileByteDao {
 			while((value = fis.read()) != -1) {
 				System.out.println(value);
 			}
-			
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		} catch (IOException e) {

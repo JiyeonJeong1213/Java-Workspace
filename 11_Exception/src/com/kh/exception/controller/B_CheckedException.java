@@ -25,18 +25,19 @@ public class B_CheckedException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		
 		System.out.print("아무 문자나 입력해주세요.");
+		String str = br.readLine();
+		System.out.println("문자열의 길이 : "+str.length());
 		
 		// 방법1. try ~ catch문 : 여기서 바로 예외처리 하기
 //		try {
-//			String str = br.readLine();
-//			System.out.println("문자열의 길이 : "+str.length());
+//			
 //		} catch (IOException e) {
 //			e.printStackTrace();
 //		}
-		
+//		
 		// 방법2. throws : 지금 현재 메소드에서 예외처리를 하지 않고 현재 이 메소드를 호출한 곳(method1)으로 떠넘기겠다.
-		String str = br.readLine();
-		System.out.println("문자열의 길이 : "+str.length());
+//		String str = br.readLine();
+//		System.out.println("문자열의 길이 : "+str.length());
 	}
 	/*
 	 * 					 예외 발생 시점									예외 처리

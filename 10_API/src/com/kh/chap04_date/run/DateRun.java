@@ -35,6 +35,9 @@ public class DateRun {
 		//    sdf.format(Date객체) : String
 		String formatDate = sdf.format(today);
 		System.out.println(formatDate);
+		
+		String formatDate1 = sdf.format(date1);
+		System.out.println(formatDate1);
 	}
 
 }

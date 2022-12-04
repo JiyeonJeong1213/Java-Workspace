@@ -11,7 +11,7 @@ public class ObjectRun {
 		//od.fileRead();
 		
 		ObjectsDao ods = new ObjectsDao();
-		//ods.fileSave("phoneList.txt");
+		ods.fileSave("phoneList.txt");
 		ods.fileRead();
 		
 	}
