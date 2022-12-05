@@ -12,14 +12,16 @@ import java.io.IOException;
 
 public class ScoreDAO {
 	public void saveScore(String name, int kor, int eng, int math, int sum, double avg) {
-		try (DataOutputStream dos = new DataOutputStream(new BufferedOutputStream(new FileOutputStream("score.txt", true)))){
-			dos.writeBytes(name+"\t"+kor+"\t"+eng+"\t"+math+"\t"+sum+"\t"+avg);
+		try (DataOutputStream dos = new DataOutputStream(new FileOutputStream("score.txt", true))){
+			String data = name+"\t"+kor+"\t"+eng+"\t"+math+"\t"+sum+"\t"+avg+"\n";
+			dos.writeUTF(data);
+			dos.flush();
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
 	}
 	public DataInputStream readScore() throws FileNotFoundException {
-		DataInputStream dis = new DataInputStream(new BufferedInputStream(new FileInputStream("score.txt")));
+		DataInputStream dis = new DataInputStream(new FileInputStream("score.txt"));
 		return dis;
 	}
 }

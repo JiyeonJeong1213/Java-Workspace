@@ -19,8 +19,7 @@ public class ScoreMenu {
 			System.out.println("2. 성적 출력");
 			System.out.println("9. 끝내기");
 			System.out.print("메뉴 번호 : ");
-			int num = sc.nextInt();
-			sc.nextLine();
+			int num = Integer.parseInt(sc.nextLine());
 			
 			switch(num) {
 			case 1 : saveScore(); break;
@@ -38,15 +37,15 @@ public class ScoreMenu {
 			System.out.print("이름 : ");
 			String name = sc.nextLine();
 			System.out.print("국어 점수 : ");
-			int kor = sc.nextInt();
+			int kor = Integer.parseInt(sc.nextLine());
 			System.out.print("영어 점수 : ");
-			int eng = sc.nextInt();
+			int eng = Integer.parseInt(sc.nextLine());
 			System.out.print("수학 점수 : ");
-			int math = sc.nextInt();
-			sc.nextLine();
+			int math = Integer.parseInt(sc.nextLine());
 			int sum = kor+eng+math;
+			double avg = sum/3;
 			
-			scr.saveScore(name, kor, eng, math, sum, sum/3);
+			scr.saveScore(name, kor, eng, math, sum, avg);
 			
 			System.out.print("그만 입력하시려면 N 또는 n 입력, 계속 하시려면 아무키나 누르세요 : ");
 			char no = sc.nextLine().toUpperCase().charAt(0);
@@ -63,20 +62,19 @@ public class ScoreMenu {
 		System.out.println("이름\t국어\t영어\t수학\t총점\t평균");
 		
 		try(DataInputStream dis = scr.readScore()){
-			String value;
-			while((value = dis.readLine()) != null) {
+			String value = null;
+			while((value = dis.readUTF()) != null) {
 				System.out.println(value);
 				sumAll += Integer.parseInt(value.split("\t")[4]);
+				avgAll += Double.parseDouble(value.split("\t")[5]);
 				count++;
 			}
-			avgAll = (double)(sumAll/(count*3));
-			count++;
 			throw new EOFException();
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		}catch (EOFException e) {
 			System.out.println("읽은 횟수\t전체 합계\t전체 평균");
-			System.out.println(count+"\t"+sumAll+"\t"+avgAll);
+			System.out.println(count+"\t"+sumAll+"\t"+avgAll/count);
 		}catch (IOException e) {
 			e.printStackTrace();
 		}
