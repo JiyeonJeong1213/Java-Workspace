@@ -45,7 +45,7 @@ public class Run {
 		// 스레드 시작
 		th1.start();
 		
-		// 스레드 생성방법 : 2. Runnable 인터페이스를 구현하기
+		// 스레드 생성방법 : 2. Runnable 인터페이스를 구현하기 // 권장됨
 		
 		Thread th2 = new Thread(new Thread2());
 		
@@ -54,7 +54,7 @@ public class Run {
 		th2.start();
 		
 		// 스레드 생성방법 : 3. 1회용 스레드가 필요할 때 (익명클래스)
-		// 굳이 클래스 만들 필요 없이 1회용으로만 만들고자할 때 사용
+		// 굳이 클래스 만들 필요 없이 1회용으로만 만들고자할 때 사용 // 자주 사용됨
 		Thread th3 = new Thread() {
 			@Override
 			public void run() {
