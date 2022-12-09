@@ -15,42 +15,42 @@ public class Run {
 	// 람다식 기본 활용
 	// 1) 매개변수가 없고 리턴값도 없는 람다식
 	@FunctionalInterface // 내부적으로 1개의 미구현함수를 지닌 인터페이스(람다식으로 사용할 인터페이스)
-	public interface lamda{
+	public interface Lamda{
 		void test();
 	}
 	// 2) 매개변수가 있고 리턴값은 없는 람다식
 	@FunctionalInterface
-	public interface lamda2{
+	public interface Lamda2{
 		void test(int number);
 	}
 	// 3) 매개변수가 없고 리턴값은 있는 람다식
 	@FunctionalInterface
-	public interface lamda3{
+	public interface Lamda3{
 		String test();
 	}
 	// 4) 매개변수가 있고 리턴값도 잇는 람다식
 	@FunctionalInterface
-	public interface lamda4{
+	public interface Lamda4{
 		int test(int a);
 	}
 	
 	public static void main(String[] args) {
-		lamda l;
+		Lamda l;
 		l = () -> {
 			System.out.println("람다식 테스트");
 		};
 		l.test();
 		
-		lamda2 l2 = (a) -> {
+		Lamda2 l2 = (a) -> {
 			System.out.println("안녕하세요"+a);
 		};
 		l2.test(33);
 		
-		lamda3 l3;
+		Lamda3 l3;
 		l3 = () -> "하이"; // 단순한 return문이면 {return "하이";}; 대신 이렇게 가능
 		System.out.println(l3.test());
 		
-		lamda4 l4 = a -> a*a; // 매개변수가 하나면 () 생략 가능, 코드가 단순 return문이면 {} 생략 가능
+		Lamda4 l4 = a -> a*a; // 매개변수가 하나면 () 생략 가능, 코드가 단순 return문이면 {} 생략 가능
 		System.out.println(l4.test(5));
 	}
 }

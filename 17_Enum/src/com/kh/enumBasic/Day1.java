@@ -2,7 +2,7 @@ package com.kh.enumBasic;
 
 // 1) 기본 사용법
 public enum Day1 {
-	MONDAY,
+	MONDAY, // static final 키워드를 안 붙였는데 자동으로 추가해줌
 	TUESDAY,
 	WEDNESDAY,
 	THURSDAY,
@@ -88,7 +88,7 @@ enum Day3{
 enum Day4{
 	// 1) 각 요소마다 우측에 매칭시킬 값을 사용함
 		MONDAY("MON", 1){
-			// 함수추가 2단계) 추상메서드를 상수필드에서 오버라이딩
+			// 함수추가 2단계) 추상메서드를 상수필드에서 오버라이딩 // 익명클래스처럼 취급 됨
 			@Override
 			public void printDay() {
 				System.out.println("월요일입니다.");

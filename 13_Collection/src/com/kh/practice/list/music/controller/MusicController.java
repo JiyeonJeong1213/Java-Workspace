@@ -71,7 +71,7 @@ public class MusicController {
 		return 1;
 	}
 	public int descSinger() {
-		Collections.sort(list, new AscTitle());
+		Collections.sort(list, new AscTitle()); // Collections.sort();가 오름차순 정렬이라 AscTitle에서 내림차순으로 바꿔줌
 		return 1;
 	}
 }
